@@ -1,0 +1,22 @@
+{
+  "baseline": "simplemem",
+  "adapter": "simplemem",
+  "agent_model": "deepseek-deepseek-v4-flash-0731",
+  "judge_model": "deepseek-flash",
+  "judge_temperature": 0.0,
+  "thinking": "disabled",
+  "embed_backend": "api",
+  "embedder_provider": "openai",
+  "config": "configs/default.yaml",
+  "dialogues": "data/full/dialogues.jsonl",
+  "questions": "data/full/questions.jsonl",
+  "limit": null,
+  "workers": 8,
+  "resume": true,
+  "started_at": "2026-09-18T17:52:49",
+  "finished_at": "2026-09-18T22:33:39",
+  "git_commit": "a4d103a4cb6166a67174b0de7dbca42b4d9d443d",
+  "num_instances": 50,
+  "num_items": 1742,
+  "rejudged_at": "2026-09-24T21:29:37"
+}

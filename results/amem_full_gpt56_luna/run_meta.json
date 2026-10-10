@@ -1,0 +1,22 @@
+{
+  "baseline": "amem",
+  "adapter": "amem",
+  "agent_model": "gpt-5.6-luna",
+  "judge_model": "deepseek-flash",
+  "judge_temperature": 0.0,
+  "thinking": "disabled",
+  "embed_backend": "api",
+  "embedder_provider": "openai",
+  "config": "configs/default.yaml",
+  "dialogues": "data/full/dialogues.jsonl",
+  "questions": "data/full/questions.jsonl",
+  "limit": null,
+  "workers": 8,
+  "resume": true,
+  "started_at": "2026-09-22T12:37:12",
+  "finished_at": "2026-09-25T15:19:44",
+  "git_commit": "2ed0876ea443e74693c4f99097c5e18bef79e4cb",
+  "num_instances": 50,
+  "num_items": 1742,
+  "rejudged_at": "2026-09-25T15:49:26"
+}

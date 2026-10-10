@@ -1,0 +1,22 @@
+{
+  "baseline": "langmem",
+  "adapter": "langmem",
+  "agent_model": "Qwen/Qwen3-32B-AWQ",
+  "judge_model": "deepseek-flash",
+  "judge_temperature": 0.0,
+  "thinking": "disabled",
+  "embed_backend": "api",
+  "embedder_provider": "openai",
+  "config": "configs/default.yaml",
+  "dialogues": "data/full/dialogues.jsonl",
+  "questions": "data/full/questions.jsonl",
+  "limit": null,
+  "workers": 16,
+  "resume": true,
+  "started_at": "2026-09-20T13:01:30",
+  "finished_at": "2026-09-20T15:51:38",
+  "git_commit": "dcc33f2bba4bf59b7fac2f2cf05a0ffed39ac31e",
+  "num_instances": 50,
+  "num_items": 1742,
+  "rejudged_at": "2026-09-24T21:08:57"
+}

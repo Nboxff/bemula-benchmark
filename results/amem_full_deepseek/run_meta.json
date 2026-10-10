@@ -1,0 +1,22 @@
+{
+  "baseline": "amem",
+  "adapter": "amem",
+  "agent_model": "deepseek-deepseek-v4-flash-0731",
+  "judge_model": "deepseek-flash",
+  "judge_temperature": 0.0,
+  "thinking": "disabled",
+  "embed_backend": "api",
+  "embedder_provider": "openai",
+  "config": "configs/default.yaml",
+  "dialogues": "data/full/dialogues.jsonl",
+  "questions": "data/full/questions.jsonl",
+  "limit": null,
+  "workers": 8,
+  "resume": true,
+  "started_at": "2026-09-22T12:38:41",
+  "finished_at": "2026-09-25T23:22:37",
+  "git_commit": "8f46bf2f7d8f23af33958cd983f94b8a66434867",
+  "num_instances": 50,
+  "num_items": 1742,
+  "rejudged_at": "2026-09-25T23:35:30"
+}

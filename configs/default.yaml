@@ -1,0 +1,47 @@
+# Bemula default configuration.
+
+seed: 42
+
+# Data scale (formal benchmark target: 50 profiles x 1 instance = 50
+# instances)
+scale:
+  num_profiles: 60
+  instances_per_profile: 1
+
+# Forget type distribution: F1 factual, F2 compositional, F3 semantic,
+# F4 inferential, F5 temporal, F6 replacement.
+forget_type_weights:
+  F1: 0.20
+  F2: 0.15
+  F3: 0.20
+  F4: 0.15
+  F5: 0.15
+  F6: 0.15
+
+difficulty:
+  # length buckets (Method.md Section 3): sessions per instance and turns per
+  # session are configured per bucket; bucket mix is short:medium:long:xlong
+  # = 30:32:32:6, sampled per instance by weight
+  sessions_buckets: {short: [5, 8], medium: [9, 16], long: [17, 25], xlong: [26, 40]}
+  turns_per_session: {short: [10, 20], medium: [21, 40], long: [41, 70], xlong: [71, 120]}
+  bucket_weights: {short: 0.30, medium: 0.32, long: 0.32, xlong: 0.06}
+  mention_counts: [1, 3, 5]        # target fact mention frequency buckets (per request)
+  distractor_facts: [20, 150]      # unrelated facts per instance (scales with length)
+  # forget requests per instance, sampled per length bucket (Method.md Section 3)
+  requests_per_instance: {short: [1, 2], medium: [2, 3], long: [3, 5], xlong: [5, 8]}
+  # share of non-F4 requests whose target is a *source* of a derived
+  # fact (guarantees derived-residue probes + 2-hop multihop coverage)
+  derived_source_quota: 0.3
+
+generation:
+  max_retries: 3
+  max_workers: 16                   # concurrent profiles/instances
+  temperature: 0.9
+  gen_model: gpt-5.6-luna    # profiles/questions generation model
+  sim_model: gpt-5.6-luna    # model for dialogue simulation (user/assistant agents)
+  window_turns: 10                # assistant sliding window (current session only)
+  critic: true                    # per-session LLM check; failed sessions regenerate once
+
+evaluation:
+  judge_temperature: 0.0
+  probe_writeback: false            # probe QA must not be written into memory

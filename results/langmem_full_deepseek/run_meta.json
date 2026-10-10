@@ -1,0 +1,22 @@
+{
+  "baseline": "langmem",
+  "adapter": "langmem",
+  "agent_model": "deepseek-deepseek-v4-flash-0731",
+  "judge_model": "deepseek-flash",
+  "judge_temperature": 0.0,
+  "thinking": "disabled",
+  "embed_backend": "api",
+  "embedder_provider": "openai",
+  "config": "configs/default.yaml",
+  "dialogues": "data/full/dialogues.jsonl",
+  "questions": "data/full/questions.jsonl",
+  "limit": null,
+  "workers": 8,
+  "resume": true,
+  "started_at": "2026-09-18T16:22:50",
+  "finished_at": "2026-09-18T17:35:01",
+  "git_commit": "c7ad9aa199cc85a24652bb4691e2d3c064e4b741",
+  "num_instances": 50,
+  "num_items": 1742,
+  "rejudged_at": "2026-09-24T21:26:18"
+}

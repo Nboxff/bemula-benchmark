@@ -1,0 +1,22 @@
+{
+  "baseline": "rag",
+  "adapter": "rag",
+  "agent_model": "Qwen/Qwen3-32B-AWQ",
+  "judge_model": "deepseek-flash",
+  "judge_temperature": 0.0,
+  "thinking": "disabled",
+  "embed_backend": "api",
+  "embedder_provider": "openai",
+  "config": "configs/default.yaml",
+  "dialogues": "data/full/dialogues.jsonl",
+  "questions": "data/full/questions.jsonl",
+  "limit": null,
+  "workers": 16,
+  "resume": true,
+  "started_at": "2026-09-16T21:23:48",
+  "finished_at": "2026-09-16T21:36:07",
+  "git_commit": "70ae21015cdeecb136fa3f4b7202e22742176459",
+  "num_instances": 50,
+  "num_items": 1742,
+  "rejudged_at": "2026-09-24T20:57:25"
+}

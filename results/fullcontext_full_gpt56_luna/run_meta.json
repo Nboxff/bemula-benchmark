@@ -1,0 +1,22 @@
+{
+  "baseline": "fullcontext",
+  "adapter": "fullcontext",
+  "agent_model": "gpt-5.6-luna",
+  "judge_model": "deepseek-flash",
+  "judge_temperature": 0.0,
+  "thinking": "disabled",
+  "embed_backend": "api",
+  "embedder_provider": "openai",
+  "config": "configs/default.yaml",
+  "dialogues": "data/full/dialogues.jsonl",
+  "questions": "data/full/questions.jsonl",
+  "limit": null,
+  "workers": 16,
+  "resume": true,
+  "started_at": "2026-09-16T17:53:30",
+  "finished_at": "2026-09-16T18:30:56",
+  "git_commit": "1fd2ccc1a93adff2b1488397710930be1a16eec1",
+  "num_instances": 50,
+  "num_items": 1742,
+  "rejudged_at": "2026-09-24T21:30:46"
+}

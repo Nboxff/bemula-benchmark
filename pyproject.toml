@@ -1,0 +1,70 @@
+[project]
+name = "bemula"
+version = "0.1.0"
+description = "Bemula: A Benchmark for Memory Unlearning in LLM Agents"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.40.0",
+    "pydantic>=2.6",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "tenacity>=8.2",
+    "tqdm>=4.66",
+    "numpy>=1.26",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
+baselines = [
+    "mem0ai>=0.1.0",
+    "sentence-transformers>=2.7",
+    "faiss-cpu>=1.8",
+    "chromadb>=0.5",
+    # A-MEM official repository dependencies.
+    "rank-bm25>=0.2",
+    "nltk>=3.8",
+    "scikit-learn>=1.4",
+    "litellm>=1.40",
+    # SimpleMem official repository dependencies. lancedb must stay below
+    # 0.37: its Tantivy-based FTS index (used for keyword retrieval) was
+    # removed in lancedb 0.37.
+    "lancedb>=0.25,<0.37",
+    "pylance>=0.39",
+    "tantivy>=0.24",
+    "dateparser>=1.2",
+    # LightMem official repository dependencies. llmlingua supplies the
+    # LLMLingua-2 pre-compressor (and, when shared, the topic segmenter's
+    # backbone); qdrant-client and transformers are already required above.
+    "llmlingua>=0.2.2",
+    "qdrant-client>=1.15",
+    # LangMem official package: background memory extraction over a LangGraph
+    # store. Pulls the langchain / langgraph stack.
+    "langmem>=0.0.30",
+]
+docs = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.7.7",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[[tool.uv.index]]
+url = "https://mirrors.aliyun.com/pypi/simple/"
+default = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["bemula"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
