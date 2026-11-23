@@ -2,7 +2,7 @@
 
 A Benchmark for Memory Unlearning in LLM Agents. Bemula tests whether agents can remove specific information from long-term memory, retain unrelated facts, and learn new ones after a forget request.
 
-Projrct page and online leaderboard: [https://nboxff.github.io/bemula-leaderboard](https://nboxff.github.io/bemula-leaderboard)
+Project page and online leaderboard: [https://nboxff.github.io/bemula-leaderboard](https://nboxff.github.io/bemula-leaderboard)
 
 ## Setup
 
