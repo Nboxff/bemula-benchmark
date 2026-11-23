@@ -1,5 +1,9 @@
 # Bemula
 
+A Benchmark for Memory Unlearning in LLM Agents. Bemula tests whether agents can remove specific information from long-term memory, retain unrelated facts, and learn new ones after a forget request.
+
+Projrct page and online leaderboard: [https://nboxff.github.io/bemula-leaderboard](https://nboxff.github.io/bemula-leaderboard)
+
 ## Setup
 
 ```bash
@@ -92,3 +96,15 @@ uv run python -m scripts.generate_questions --config configs/default.yaml \
 ```
 
 Every generation script accepts `--limit N` for small trial runs.
+
+
+## Citation
+
+```tex
+@article{xie2026can,
+  title={Can agents forget when asked? A benchmark for memory unlearning in LLM agents},
+  author={Xie, Bofan and Wang, Chaokun and Ge, Guanchen and Wang, Songyao and Niu, Fang and Zhang, Hang and Wang, Wei},
+  journal={arXiv preprint arXiv:2610.18052},
+  year={2026}
+}
+```
